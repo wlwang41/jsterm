@@ -211,3 +211,10 @@ COMMANDS.help = function(argv, cb) {
    }
    cb();
 }
+
+COMMANDS.whoami = function(argv, cb) {
+    var term = this._terminal;
+    var entry = this._terminal.getEntry("README");
+    term.write(entry.contents);
+    cb();
+}
